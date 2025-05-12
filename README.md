@@ -26,35 +26,35 @@ A lightweight and modular React boilerplate to kickstart your web projects with 
    cd react-boilerplate
 2. **Install dependencies:**
     ```bash
-    npm install```
+    npm install
 3. **Start the development server:**
     ```bash
-    npm run dev```
+    npm run dev
 4. **Open http://localhost:5173 in your browser.**
 
 ## Available Scripts
-    npm run dev: Start the development server.
-    npm run build: Build the app for production.
-    npm run preview: Preview the production build locally.
-    npm run test: Run unit tests with Jest.
-    npm run lint: Run ESLint to check code quality.
-    npm run format: Format code with Prettier.
+- ```npm run dev```: Start the development server.
+- ```npm run build```: Build the app for production.
+- ```npm run preview```: Preview the production build locally.
+- ```npm run test```: Run unit tests with Jest.
+- ```npm run lint```: Run ESLint to check code quality.
+- ```npm run format```: Format code with Prettier.
 ## Project Structure
-├── public/                # Static assets
-├── src/
-│   ├── assets/            # Images, fonts, etc.
-│   ├── components/        # Reusable React components
-│   ├── pages/             # Page components
-│   ├── styles/            # Global styles and Tailwind config
-│   ├── App.tsx            # Main app component
-│   ├── main.tsx           # Entry point
-├── tests/                 # Test files
-├── .github/               # GitHub Actions workflows
-├── .husky/                # Pre-commit hooks
-├── vite.config.ts         # Vite configuration
-├── tsconfig.json          # TypeScript configuration
-├── package.json           # Project dependencies and scripts
-└── README.md              # This file
+    ├── public/                # Static assets
+    ├── src/
+    │   ├── assets/            # Images, fonts, etc.
+    │   ├── components/        # Reusable React components
+    │   ├── pages/             # Page components
+    │   ├── styles/            # Global styles and Tailwind config
+    │   ├── App.tsx            # Main app component
+    │   ├── main.tsx           # Entry point
+    ├── tests/                 # Test files
+    ├── .github/               # GitHub Actions workflows
+    ├── .husky/                # Pre-commit hooks
+    ├── vite.config.ts         # Vite configuration
+    ├── tsconfig.json          # TypeScript configuration
+    ├── package.json           # Project dependencies and scripts
+    └── README.md              # This file
 
 ## Contributing
 Contributions are welcome! Please follow these steps:
