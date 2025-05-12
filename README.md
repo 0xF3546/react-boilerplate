@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# React Boilerplate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A lightweight and modular React boilerplate to kickstart your web projects with modern tooling and best practices.
+
+## Features
+
+- **React 18**: Latest React version with hooks and concurrent rendering.
+- **TypeScript**: Type-safe development for better code quality.
+- **Vite**: Fast and modern build tool for development and production.
+- **ESLint & Prettier**: Code linting and formatting for consistent style.
+- **Jest & React Testing Library**: Unit testing setup for reliable code.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
+- **Husky & Lint-Staged**: Pre-commit hooks to ensure code quality.
+- **GitHub Actions**: CI/CD pipeline for automated testing and deployment.
+
+## Prerequisites
+
+- Node.js (>= 18.x)
+- npm (>= 9.x) or Yarn/Pnpm
+
+## Getting Started
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/0xF3546/react-boilerplate.git
+   cd react-boilerplate
+2. **Install dependencies:**
+    ```bash
+    npm install```
+3. **Start the development server:**
+    ```bash
+    npm run dev```
+4. **Open http://localhost:5173 in your browser.**
 
 ## Available Scripts
+    npm run dev: Start the development server.
+    npm run build: Build the app for production.
+    npm run preview: Preview the production build locally.
+    npm run test: Run unit tests with Jest.
+    npm run lint: Run ESLint to check code quality.
+    npm run format: Format code with Prettier.
+## Project Structure
+├── public/                # Static assets
+├── src/
+│   ├── assets/            # Images, fonts, etc.
+│   ├── components/        # Reusable React components
+│   ├── pages/             # Page components
+│   ├── styles/            # Global styles and Tailwind config
+│   ├── App.tsx            # Main app component
+│   ├── main.tsx           # Entry point
+├── tests/                 # Test files
+├── .github/               # GitHub Actions workflows
+├── .husky/                # Pre-commit hooks
+├── vite.config.ts         # Vite configuration
+├── tsconfig.json          # TypeScript configuration
+├── package.json           # Project dependencies and scripts
+└── README.md              # This file
 
-In the project directory, you can run:
+## Contributing
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature/your-feature).
+3. Commit your changes (git commit -m 'Add your feature').
+4. Push to the branch (git push origin feature/your-feature).
+5. Open a Pull Request.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
+This project is licensed under the MIT License (LICENSE).
