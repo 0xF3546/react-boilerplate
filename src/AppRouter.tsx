@@ -9,7 +9,7 @@ import HomePage from "./pages/Home";
 import RegisterPage from "./pages/Register";
 import LoginPage from "./pages/Login";
 import { IFunctionRoute } from "./types/IFunctionRoute";
-import { RouteConfig } from "./types/Routeconfig";
+import { RouteConfig } from "./types/RouteConfig";
 
 interface AuthContextType {
   currentUser: { id: string } | null;

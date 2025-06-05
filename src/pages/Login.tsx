@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useAuthProvider } from "../hooks/useAuthProvider";
 import { handleChange } from "../utils/utils";
 
@@ -27,7 +27,12 @@ export default function LoginPage() {
     };
 
     return (
-
+        <>
+{errorMessage && (
+            <div className="error-message">
+                {errorMessage}
+            </div>
+        )}
         <form onSubmit={handleLogin}>
             <input
                 value={form.user}
@@ -46,6 +51,6 @@ export default function LoginPage() {
                 Submit
             </button>
         </form>
-
+</>
     )
 }
