@@ -63,7 +63,9 @@ export default function AppRouter(): JSX.Element {
         key={`layout-${i}`}
         element={
           routes.some(route => route.auth) ? (
-            <AuthRoutes redirectTo="/login" />
+            <AuthRoutes redirectTo="/auth/login">
+              {layout}
+            </AuthRoutes>
           ) : (
             layout
           )
