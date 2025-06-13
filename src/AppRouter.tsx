@@ -1,5 +1,5 @@
 import { JSX, useContext, useMemo } from "react";
-import { BrowserRouter, Navigate, Outlet, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Navigate, Outlet, Route, Routes } from "react-router-dom";
 import { authContext } from "./contexts/authContext";
 import NotFoundPage from "./pages/NotFound";
 import DashboardPage from "./pages/Dashboard";
@@ -85,16 +85,7 @@ export default function AppRouter(): JSX.Element {
   );
 }
 
-const AuthRoutes = ({ redirectTo = "/login" }: IFunctionRoute) => {
+const AuthRoutes = ({ redirectTo = "/auth/login", children }: IFunctionRoute & { children?: React.ReactNode }) => {
   const { currentUser } = useContext(authContext) as AuthContextType;
-  const location = useLocation();
-
-  if (currentUser) {
-    return <Outlet />;
-  }
-
-  const redirectParam = encodeURIComponent(location.pathname + location.search);
-  const redirectPath = `${redirectTo}?redirect=${redirectParam}`;
-
-  return <Navigate to={redirectPath} replace />;
+  return currentUser ? <>{children ? children : <Outlet />}</> : <Navigate to={redirectTo} replace />;
 };
