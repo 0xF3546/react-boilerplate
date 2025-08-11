@@ -44,6 +44,7 @@ A lightweight and modular React boilerplate to kickstart your web projects with 
 - ```npm run test```: Run unit tests with Jest.
 - ```npm run lint```: Run ESLint to check code quality.
 - ```npm run format```: Format code with Prettier.
+- - ```npm run codegen```: Generates API-Client-Code based on public/api.json.
 ## Project Structure
     ├── public/                # Static assets
     ├── src/
