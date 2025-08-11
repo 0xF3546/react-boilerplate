@@ -15,7 +15,7 @@ interface AuthContextType {
   currentUser: { id: string } | null;
 }
 
-export const AppRoutes: Record<string, RouteConfig> = {
+export const AppRoutes = {
   HOME: {
     path: "/",
     element: <HomePage />,
