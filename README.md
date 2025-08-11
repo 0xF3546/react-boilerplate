@@ -4,7 +4,7 @@ A lightweight and modular React boilerplate to kickstart your web projects with 
 
 ## Features
 
-- **React 18**: Latest React version with hooks and concurrent rendering.
+- **React 19**: Latest React version with hooks and concurrent rendering.
 - **TypeScript**: Type-safe development for better code quality.
 - **Vite**: Fast and modern build tool for development and production.
 - **ESLint & Prettier**: Code linting and formatting for consistent style.
@@ -12,6 +12,7 @@ A lightweight and modular React boilerplate to kickstart your web projects with 
 - **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
 - **Husky & Lint-Staged**: Pre-commit hooks to ensure code quality.
 - **GitHub Actions**: CI/CD pipeline for automated testing and deployment.
+- **Vercel**: Default Vercel-json is provided.
 
 ## Prerequisites
 
