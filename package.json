@@ -6,6 +6,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.0.6",
     "axios": "^1.7.7",
+    "babel-plugin-react-compiler": "^19.1.0-rc.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
