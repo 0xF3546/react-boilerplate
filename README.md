@@ -13,6 +13,10 @@ A lightweight and modular React boilerplate to kickstart your web projects with 
 - **Husky & Lint-Staged**: Pre-commit hooks to ensure code quality.
 - **GitHub Actions**: CI/CD pipeline for automated testing and deployment.
 - **Vercel**: Default Vercel-json is provided.
+- **OpenAPI-Codegenerator**: Automatic API client generation from OpenAPI specifications.
+- **React Query/TanStack Query**: Powerful data fetching and state management.
+- **Context API**: Built-in authentication and state management.
+- **React Router**: Client-side routing for single-page applications.
 
 ## Prerequisites
 
