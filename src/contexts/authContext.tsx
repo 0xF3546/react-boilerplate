@@ -1,12 +1,30 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import authService from "../services/authService";
 import { IUser } from "../types/IUser";
-import { IAuth } from "../types/IAuth";
-import { IAuthContext } from "../types/IAuthContext";
 
-export const authContext = createContext<IAuthContext | null>(null);
+interface IAuthProvider {
+  children: React.ReactNode;
+}
 
-export function AuthProvider({ children }: IAuth) {
+interface IAuthContext {
+  currentUser: IUser | null;
+  setCurrentUser: React.Dispatch<React.SetStateAction<IUser | null>>;
+  login: (user: any) => Promise<void>;
+  register: (user: any) => Promise<void>;
+  logout: () => void;
+}
+
+const AuthContext = createContext<IAuthContext | null>(null);
+
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+  return context;
+};
+
+export function AuthProvider({ children }: IAuthProvider) {
   const lStore: any = localStorage.getItem("user");
   const [currentUser, setCurrentUser] = useState<IUser | null>(JSON.parse(lStore));
 
@@ -38,9 +56,17 @@ export function AuthProvider({ children }: IAuth) {
     window.location.href = "/";
   }
 
+  const values = {
+    currentUser,
+    setCurrentUser,
+    login,
+    register,
+    logout
+  };
+
   return (
-    <authContext.Provider value={{ currentUser, setCurrentUser, login, register, logout }}>
+    <AuthContext value={values}>
       {children}
-    </authContext.Provider>
+    </AuthContext>
   );
 }

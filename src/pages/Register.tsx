@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useAuthProvider } from "../hooks/useAuthProvider";
 import { handleChange } from "../utils/utils";
+import { useAuth } from "../contexts/authContext";
 
 export default function RegisterPage() {
     const [form, setForm] = useState({ user: '', password: '' });
     const [loading, setLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
-    const { register } = useAuthProvider();
+    const { register } = useAuth();
 
     let handleRegister = async (e: any) => {
         e.preventDefault();

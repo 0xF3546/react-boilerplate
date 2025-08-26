@@ -1,6 +1,5 @@
 import { JSX, useContext, useMemo } from "react";
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from "react-router-dom";
-import { authContext } from "./contexts/authContext";
 import NotFoundPage from "./pages/NotFound";
 import DashboardPage from "./pages/Dashboard";
 import BaseLayout from "./layouts/BaseLayout";
@@ -10,6 +9,7 @@ import RegisterPage from "./pages/Register";
 import LoginPage from "./pages/Login";
 import { IFunctionRoute } from "./types/IFunctionRoute";
 import { RouteConfig } from "./types/RouteConfig";
+import { useAuth } from "./contexts/authContext";
 
 interface AuthContextType {
   currentUser: { id: string } | null;
@@ -86,6 +86,6 @@ export default function AppRouter(): JSX.Element {
 }
 
 const AuthRoutes = ({ redirectTo = "/auth/login", children }: IFunctionRoute & { children?: React.ReactNode }) => {
-  const { currentUser } = useContext(authContext) as AuthContextType;
+  const { currentUser } = useAuth();
   return currentUser ? <>{children ? children : <Outlet />}</> : <Navigate to={redirectTo} replace />;
 };
