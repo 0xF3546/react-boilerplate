@@ -1,3 +1,4 @@
+import common from '../en/common.json';
 export const resources = {
-  common: require('./en/common.json')
+    common
 };

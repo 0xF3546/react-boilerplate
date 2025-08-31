@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { LanguageChanger } from "../components/LanguageChanger";
 import {
   FaCode,
   FaPaintBrush,
@@ -7,11 +8,17 @@ import {
   FaShieldAlt,
   FaCubes,
 } from "react-icons/fa";
+import { useLanguage } from "../contexts/languageContext";
 
 export default function HomePage() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
+  const lang = useLanguage();
   return (
     <div className="bg-gray-900 text-white min-h-screen">
+      <div className="absolute top-4 right-4 z-50">
+        {t('current_language')} {lang.language === "de" ? "Deutsch" : "English"}
+        <LanguageChanger />
+      </div>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-800 to-indigo-900 py-20">
         <div className="container mx-auto px-4 text-center">
