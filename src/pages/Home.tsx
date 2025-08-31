@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   FaCode,
   FaPaintBrush,
@@ -8,6 +9,7 @@ import {
 } from "react-icons/fa";
 
 export default function HomePage() {
+  const { t } = useTranslation();
   return (
     <div className="bg-gray-900 text-white min-h-screen">
       {/* Hero Section */}
