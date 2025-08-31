@@ -1,4 +1,4 @@
-import { JSX, useContext, useMemo } from "react";
+import { JSX, useMemo } from "react";
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from "react-router-dom";
 import NotFoundPage from "./pages/NotFound";
 import DashboardPage from "./pages/Dashboard";
@@ -10,10 +10,6 @@ import LoginPage from "./pages/Login";
 import { IFunctionRoute } from "./types/IFunctionRoute";
 import { RouteConfig } from "./types/RouteConfig";
 import { useAuth } from "./contexts/authContext";
-
-interface AuthContextType {
-  currentUser: { id: string } | null;
-}
 
 export const AppRoutes = {
   HOME: {
