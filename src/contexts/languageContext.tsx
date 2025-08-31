@@ -22,7 +22,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     i18n.changeLanguage(language);
     localStorage.setItem("language", language);
-  }, [language, i18n]);
+  }, [language]);
 
   const values = {
     language,
