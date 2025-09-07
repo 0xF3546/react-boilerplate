@@ -1,4 +1,6 @@
 import common from '../en/common.json';
-export const resources = {
+const resources = {
     common
-};
+} as const;
+
+export default resources;

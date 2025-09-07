@@ -1,0 +1,16 @@
+{
+    "en": {
+        "languageCode": "en",
+        "countryName": "EN",
+        "dateFormat": "dd/MM/yyyy",
+        "fullName": "English",
+        "description": "English - Great Britain"
+    },
+    "de": {
+        "languageCode": "de",
+        "countryName": "DE",
+        "dateFormat": "dd.MM.yyyy",
+        "fullName": "Deutsch",
+        "description": "Deutsch - Deutschland"
+    }
+}

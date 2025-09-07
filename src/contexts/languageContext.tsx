@@ -1,9 +1,10 @@
 import i18n from "../utils/i18n";
 import { createContext, useContext, useEffect, useState } from "react";
+import LanguageData from '../utils/locales/LanguageData.json';
 
 interface LanguageContextType {
   language: string;
-  setLanguage: (language: string) => void;
+  setLanguage: (language: keyof typeof LanguageData) => void;
 }
 
 export const languageContext = createContext<LanguageContextType | undefined>(undefined);
