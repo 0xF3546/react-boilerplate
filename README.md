@@ -17,6 +17,7 @@ A lightweight and modular React boilerplate to kickstart your web projects with 
 - **React Query/TanStack Query**: Powerful data fetching and state management.
 - **Context API**: Built-in authentication and state management.
 - **React Router**: Client-side routing for single-page applications.
+- **i18next**: Easy Internationalization with namespaces and language switching
 
 ## Prerequisites
 
